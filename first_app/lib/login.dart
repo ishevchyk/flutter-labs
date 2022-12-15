@@ -1,62 +1,39 @@
 import 'package:flutter/material.dart';
 
-class Login extends StatefulWidget {
+class Login extends StatelessWidget {
+  final TextEditingController nameInput;
+  final TextEditingController lastnameInput;
   final Function login;
-  const Login(this.login, {super.key});
-
-  @override
-  State<Login> createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
-  final nameInput = TextEditingController();
-  final lastnameInput = TextEditingController();
-
-  void submitData() {
-    final name = nameInput.text;
-    final lastname = lastnameInput.text;
-    if (name.isEmpty || lastname.isEmpty) {
-      return;
-    }
-    widget.login(name, lastname);
-  }
+  const Login(this.nameInput, this.lastnameInput, this.login);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+    return Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Column(
-            children: [
-              TextField(
-                controller: nameInput,
-                onSubmitted: (_) => submitData,
-                style: TextStyle(
-                    letterSpacing: double.parse('2'),
-                    color: Colors.yellow.shade800),
-                decoration: InputDecoration(
-                    labelText: 'Firstname',
-                    labelStyle: TextStyle(color: Colors.blue)),
+        children: [
+          Container(
+            padding: EdgeInsets.all(15.0),
+            child: TextField(
+              controller: nameInput,
+              decoration: InputDecoration(
+                hintText: 'Firstname',
               ),
-              TextField(
-                controller: lastnameInput,
-                onSubmitted: (_) => submitData,
-                style: TextStyle(
-                    letterSpacing: double.parse('2'),
-                    color: Colors.yellow.shade800),
-                decoration: InputDecoration(
-                    labelText: 'Lastname',
-                    labelStyle: TextStyle(color: Colors.blue)),
-              ),
-            ],
+            ),
           ),
           Container(
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(15.0),
+            child: TextField(
+              controller: lastnameInput,
+              decoration: InputDecoration(
+                hintText: 'Lastname',
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(15.0),
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(fixedSize: const Size(120, 40)),
-                onPressed: submitData,
+                onPressed: () => login(nameInput.text, lastnameInput.text),
                 child: Text(
                   'Log in',
                   style: TextStyle(
@@ -66,7 +43,6 @@ class _LoginState extends State<Login> {
           ),
         ],
       ),
-      // ),
     );
   }
 }

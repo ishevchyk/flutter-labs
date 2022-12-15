@@ -4,43 +4,33 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
+class MyApp extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Lab 1 Flutter',
-      home: MyHomePage(),
-    );
+  State<StatefulWidget> createState() {
+    return MyAppState();
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class MyAppState extends State<MyApp> {
   var loggedIn = false;
-  String _firstname = '';
-  String _lastname = '';
+  String firstname;
+  String lastname;
 
-  void _onLogin(String name, String lastname) {
+  onLogin(String firstname, String lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
     setState(() {
       loggedIn = !loggedIn;
-      _firstname = name;
-      _lastname = lastname;
     });
   }
 
-  void _onLogout() {
+  void onLogout() {
+    nameInputController.text = '';
+    lastnameInputController.text = '';
     setState(() {
       loggedIn = !loggedIn;
-      _firstname = '';
-      _lastname = '';
+      firstname = '';
+      lastname = '';
     });
   }
 
@@ -49,19 +39,23 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    nameInputController.text = '';
+    lastnameInputController.text = '';
+
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
             title: Text(
               'Lab 1 Flutter',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
+          backgroundColor: Colors.yellow,
           body: Container(
-            color: Colors.yellow.shade300,
             alignment: Alignment.center,
             child: !loggedIn
-                ? Login(_onLogin)
-                : Home(_firstname, _lastname, _onLogout),
+                ? Login(nameInputController, lastnameInputController, onLogin)
+                : Home(firstname, lastname, onLogout),
           )
           //
           ),
