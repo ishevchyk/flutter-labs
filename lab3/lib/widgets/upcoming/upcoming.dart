@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lab3/widgets/upcoming/upcoming_page.dart';
 
 import '../shared/button.dart';
+import 'upcoming_page.dart';
 
 class UpcomingMovies extends StatelessWidget {
   final List upcomingMovies;

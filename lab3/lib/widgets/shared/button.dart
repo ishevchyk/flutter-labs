@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
   final Widget page;
-  // final List data;
   const Button({
     super.key,
     required this.page,

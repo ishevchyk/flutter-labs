@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ee9d9b4-2713-4440-a00c-e821df4eada4" name="Changes" comment="">
+    <list default="true" id="72de6c3e-1f09-4348-b77b-a4f10d433f36" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis_options.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/analysis_options.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/android/lab3_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/android/lab3_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/ios/Flutter/Generated.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab3/lab3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3/lab3.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +32,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2IEz7vzXKuWCd4XDmWHuDi7IC2E" />
+  <component name="ProjectId" id="2IxKDDg6rD0tJ2rJxAWmMf2s55I" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" />
     <panes>
@@ -36,36 +49,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;flutter.view.tool.window.visible&quot;: &quot;true&quot;,
-    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/irynashevchyk/Documents/Flutter/LPNU FLUTTER/flutter-labs/first_app&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "flutter.view.tool.window.visible": "true",
+    "io.flutter.reload.alreadyRun": "true",
+    "last_opened_file_path": "/Users/irynashevchyk/Documents/Flutter/LPNU FLUTTER/flutter-labs/first_app",
+    "show.migrate.to.gradle.popup": "false"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
-      <method v="2" />
-    </configuration>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1ee9d9b4-2713-4440-a00c-e821df4eada4" name="Changes" comment="" />
-      <created>1669761366380</created>
+      <changelist id="72de6c3e-1f09-4348-b77b-a4f10d433f36" name="Changes" comment="" />
+      <created>1671117672591</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669761366380</updated>
-      <workItem from="1669761368278" duration="2876000" />
-      <workItem from="1669821088259" duration="66000" />
-      <workItem from="1669821309995" duration="1276000" />
-      <workItem from="1669924323345" duration="22073000" />
-      <workItem from="1671035824168" duration="2857000" />
+      <updated>1671117672591</updated>
+      <workItem from="1671117674897" duration="825000" />
     </task>
     <servers />
   </component>

@@ -4,33 +4,43 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
-  State<StatefulWidget> createState() {
-    return MyAppState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Lab 1 Flutter',
+      home: MyHomePage(),
+    );
   }
 }
 
-class MyAppState extends State<MyApp> {
-  var loggedIn = false;
-  String firstname;
-  String lastname;
+class MyHomePage extends StatefulWidget {
+  MyHomePage({super.key});
 
-  onLogin(String firstname, String lastname) {
-    this.firstname = firstname;
-    this.lastname = lastname;
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  var loggedIn = false;
+  String _firstname = '';
+  String _lastname = '';
+
+  void _onLogin(String name, String lastname) {
     setState(() {
       loggedIn = !loggedIn;
+      _firstname = name;
+      _lastname = lastname;
     });
   }
 
-  void onLogout() {
-    nameInputController.text = '';
-    lastnameInputController.text = '';
+  void _onLogout() {
     setState(() {
       loggedIn = !loggedIn;
-      firstname = '';
-      lastname = '';
+      _firstname = '';
+      _lastname = '';
     });
   }
 
@@ -39,23 +49,19 @@ class MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    nameInputController.text = '';
-    lastnameInputController.text = '';
-
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
             title: Text(
               'Lab 1 Flutter',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),
-          backgroundColor: Colors.yellow,
           body: Container(
+            color: Colors.yellow.shade300,
             alignment: Alignment.center,
             child: !loggedIn
-                ? Login(nameInputController, lastnameInputController, onLogin)
-                : Home(firstname, lastname, onLogout),
+                ? Login(_onLogin)
+                : Home(_firstname, _lastname, _onLogout),
           )
           //
           ),
