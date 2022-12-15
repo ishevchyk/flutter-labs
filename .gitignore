@@ -20,9 +20,3 @@ doc/api/
 *.js.deps
 *.js.map
 .DS_Store
-
-lab3/linux
-lab3/web
-lab3/windows
-lab3/test
-lab3/macos
